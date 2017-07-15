@@ -2,3 +2,4 @@
 other/
 /node_modules
 golang-reactjs-redux
+.env
