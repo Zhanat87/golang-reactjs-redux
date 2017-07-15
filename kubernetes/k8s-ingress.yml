@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: golang-reactjs-redux
+  labels:
+    app: golang-reactjs-redux
+    tier: frontend
+spec:
+  backend:
+    serviceName: golang-reactjs-redux
+    servicePort: 8080
