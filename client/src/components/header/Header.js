@@ -20,6 +20,7 @@ class Header extends Component {
     const isAboutPage = pathname.indexOf("about") > -1;
     const isUsersPage = pathname.indexOf("users") > -1;
     const isReposPage = pathname.indexOf("repos") > -1;
+      const isHelloPage = pathname.indexOf("hello") > -1;
 
     return (
       !isLoginPage &&
@@ -55,6 +56,12 @@ class Header extends Component {
               className={isAboutPage ? "nav-item active" : "nav-item"}
             >
               <Link className="nav-link" to="/about">About Us</Link>
+            </li>
+            <li
+                title="Hello"
+                className={isHelloPage ? "nav-item active" : "nav-item"}
+            >
+              <Link className="nav-link" to="/hello">Hello</Link>
             </li>
           </ul>
 

@@ -18,6 +18,7 @@ import UsersPage from "../user/UsersPage";
 import ReposPage from "../repo/ReposPage";
 import About from "../about/About";
 import NotFound from "../misc/NotFound";
+import HelloPage from "../hello/HelloPage";
 
 import { logout } from "../../actions/auth";
 
@@ -51,6 +52,11 @@ class App extends Component {
                   path="/repos"
                   isAuthenticated={isAuthenticated}
                   component={ReposPage}
+                />
+                <PrivateRoute
+                    path="/hello"
+                    isAuthenticated={isAuthenticated}
+                    component={HelloPage}
                 />
                 <Route component={NotFound} />
               </Switch>
