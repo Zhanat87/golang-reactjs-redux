@@ -63,7 +63,7 @@ export function callApi(
   };
 }
 
-export const ID_TOKEN = "id_token";
+export const ID_TOKEN = "token";
 
 export function setIdToken(idToken) {
   localStorage.setItem(ID_TOKEN, idToken);

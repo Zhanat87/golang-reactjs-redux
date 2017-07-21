@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/cloudmu/react-redux-starter-kit/issues"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:8080",
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
