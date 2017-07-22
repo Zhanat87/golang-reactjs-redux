@@ -47,17 +47,25 @@ export function callApi(
         if (response === undefined) {
           dispatch(onRequestFailure(error));
         } else {
-          error.status = response.status;
-          error.statusText = response.statusText;
-          response.text().then(text => {
-            try {
-              const json = JSON.parse(text);
-              error.message = json.message;
-            } catch (ex) {
-              error.message = text;
-            }
-            dispatch(onRequestFailure(error));
-          });
+            // if (response.status == 401 && response.statusText == 'Unauthorized') {
+            //     if (response.url == 'http://localhost:3000/auth/refresh_token') {
+            //         // logout
+            //     } else {
+            //         // send refresh jwt request
+            //     }
+            // } else {
+                error.status = response.status;
+                error.statusText = response.statusText;
+                response.text().then(text => {
+                    try {
+                        const json = JSON.parse(text);
+                        error.message = json.message;
+                    } catch (ex) {
+                        error.message = text;
+                    }
+                    dispatch(onRequestFailure(error));
+                });
+            // }
         }
       });
   };

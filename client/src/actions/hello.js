@@ -20,7 +20,7 @@ function helloSuccess(data) {
 function helloFailure(error) {
   return {
     type: HELLO_FAILURE,
-      helloError: error
+    helloError: error
   };
 }
 
